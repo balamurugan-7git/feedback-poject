@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> <style>
+    body{
+        background-color: aqua;
+     }
+    h1{
+      text-align: center;
+    }
+    .form-container{
+        padding: 50px;
+        text-align: center;
+        color: rgb(15, 14, 14);
+   }
+
+   .input-style {
+    height: 25px;
+    width: 400px;
+    border-radius: 8PX;
+    margin-bottom: 20px;
+    padding: 5px;
+
+   }
+    .box{
+        background-color: rgb(253, 253, 253);
+        border-radius: 10px;
+        height: 1200px;
+        width: 550px;
+        border-style:solid;
+    }
+    .text-area{
+        height: 150px;
+        width: 400px;
+    }
+    .input-select{
+        margin-top: 10px;
+        height: 50px;
+        width: 250px;
+        border-radius: 6px;
+        
+    }
+    .btn{
+        background-color: RED;
+        color: yellow;
+        align-items: center;
+        margin-top: 30px;
+        height: 50PX;
+        width: 150PX;
+        border-radius: 10PX;
+        
+        
+    }
+</style>
+<h1>FEEDBACK  FORM </h1>
+    <center>
+    <DIV class="box">
+        <div class="form-container">
+            <form>
+            <label > FULL NAME: <input type="text"  placeholder="SAY YOUR NAME" class="input-style" required id="name"></label>
+            <label> REGISTER NUMBER:<input type="number" placeholder="912422104007" class="input-style" required id="regnum"> </label>
+            <label> COLLEGE NAME:<input type="TEXT" placeholder="SHANMUGANATHAN ENGINEERING COLLEGE" class="input-style" required id="clgname"></label>
+            <LABEL> DEGREE AND BRANCH:<input type="text" placeholder="B.E COMPUTER SCIENCE" class="input-style" required id="deg"></LABEL>
+            <LABEL> EMAIL ADDRESS: <input type="email " placeholder="student@gmail.com" class="input-style" required id="email"></LABEL>
+            <label > DOMAIN: 
+            <select class="input-style" id="domain">
+                
+                <option >SELECT YOUR DOMAIN</option>
+                <option >JAVA FULL STACK</option>
+                <option >PYTHON</option>
+                <option >IOT</option >
+                    <option>AI </option>
+                    <OPtion>UI AND UX DESIGN</OPtion>
+            </select>
+            </label>
+            <Label>MODE:
+                <SElect class="input-style" id="option">
+                    <OPtion>OFFLINE MODE</OPtion>
+                    <OPtion>ONLINE MODE</OPtion>
+                </SElect>
+            </Label>
+            <LAbel>PHONENUMBER:<input type="number" placeholder="8778504945" class="input-style" id="ph"></LAbel>
+            <LABEL> WRITE YOUR FEEDBACK &#x1F58A  &#x1F4DA </Label><br><br>
+                <textarea  class="text-area" id="feedback"></textarea><br><br>
+                <label >RATING: &#11088;&#11088;&#11088;&#11088;&#11088; <br><br>
+                    <SElect class="input-select" id="rating">
+                        <option>SAY YOUR RATING FOR COURSE</option>
+                        <option> EXCELLENT &#11088; &#11088;&#11088;&#11088;&#11088;</option>
+                        <option>GOOD &#11088;&#11088;&#11088;&#11088;</option>
+                        <option >AVERAGE&#11088;&#11088;</option>
+                        <option>BELOW AVERAGE&#11088; </option>
+                        <OPtion>BAD &#11088; &#128162; &#128127;</OPtion>
+                    </SElect>
+                </label>
+
+                <div >
+                <button onclick="btn(event)"  class="btn" id="button">SUBMIT FEEDBACK FORM</button>
+                </div>
+            </form>
+                </DIV> 
+    </DIV></center>
+    <script>
+         function btn(event)
+
+        {
+             event. preventDefault()
+            const name=document.getElementById("name").value
+            const registernumber=document.getElementById("regnum").value
+            const phonenumber=document.getElementById("ph").value
+            const email=document.getElementById("email").value
+            const degree=document.getElementById("deg").value
+            const clgname=document.getElementById("clgname").value
+            const option=document.getElementById("option").value
+            const domain=document .getElementById("domain").value
+            const rating=document .getElementById("rating").value
+            const feedback=document .getElementById("feedback").value
+
+
+
+            
+                  if (name && registernumber&& phonenumber&&email&&degree&&clgname &&option&&domain&&rating&&feedback )
+                   {
+                window.location.href="sucessfully.html"
+             }           
+         else {
+        alert("Please fill all the fields.");
+      }
+      
+        }
+    </script>
+</body>
+</html>
